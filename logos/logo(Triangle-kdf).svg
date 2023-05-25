@@ -1,0 +1,6 @@
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
+            <polygon points="100,20 180,180 20,180" style="fill: gray;"/>
+            <text x="100" y="150" text-anchor="middle" dominant-baseline="middle" fill="black" font-size="50px" font-weight="bold">KDF</text>
+        </svg>
+        

@@ -6,9 +6,9 @@ const fs = require('fs');
 
 // function to check the length of the logo to make sure it is exactly 3 letters not more than that
 const logoNameValidate= (data)=>{
-    if(data.length !==3){
+    if(data.length >3 || data.length==0){
         console.log('');
-        console.log('invalid Logo name please enter just 3 letters');
+        console.log('invalid Logo name please enter up to 3 letters');
     }
     else{
         return true;
@@ -52,20 +52,20 @@ inquirer
             case 'Triangle':
                 var logo = new triangle(Response.shapeColor,Response.text.toUpperCase(),Response.textColor);
                 var content=logo.render();
-                fs.writeFile(`./examples/logo(${Response.shape}-${Response.text}).svg`,content,(error) =>
-                    error ? console.log(error) : console.log('Generated logo.svg'));
+                fs.writeFile(`./logos/logo(${Response.shape}-${Response.text}).svg`,content,(error) =>
+                    error ? console.log(error) : console.log(`logo(${Response.shape}-${Response.text}).svg has been successfully created`));
                 break;
             case 'Circle':
                 var logo = new circle(Response.shapeColor,Response.text.toUpperCase(),Response.textColor);
                 var content=logo.render();
-                fs.writeFile(`./examples/logo(${Response.shape}-${Response.text}).svg`,content,(error) =>
-                    error ? console.log(error) : console.log('Generated logo.svg'));
+                fs.writeFile(`./logos/logo(${Response.shape}-${Response.text}).svg`,content,(error) =>
+                    error ? console.log(error) : console.log(`logo(${Response.shape}-${Response.text}).svg has been successfully created`));
                 break;
             case 'Square':
                 var logo = new square(Response.shapeColor,Response.text.toUpperCase(),Response.textColor);
                 var content=logo.render();
-                fs.writeFile(`./examples/logo(${Response.shape}-${Response.text}).svg`,content,(error) =>
-                    error ? console.log(error) : console.log('Generated logo.svg'));
+                fs.writeFile(`./logos/logo(${Response.shape}-${Response.text}).svg`,content,(error) =>
+                    error ? console.log(error) : console.log(`logo(${Response.shape}-${Response.text}).svg has been successfully created`));
                 break;
         }
     });

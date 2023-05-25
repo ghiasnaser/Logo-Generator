@@ -1,0 +1,6 @@
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200">
+            <circle cx="100" cy="100" r="80" fill="yellow" />
+            <text x="100" y="110" text-anchor="middle" dominant-baseline="middle" fill="green" font-size="50px" font-weight="bold">GHN</text>
+        </svg>
+        
