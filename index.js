@@ -3,7 +3,17 @@ const triangle=require('./lib/Triangle');
 const circle = require('./lib/Circle');
 const square = require('./lib/square');
 const fs = require('fs');
-const { log } = require('console');
+
+// function to check the length of the logo to make sure it is exactly 3 letters not more than that
+const logoNameValidate= (data)=>{
+    if(data.length !==3){
+        console.log('');
+        console.log('invalid Logo name please enter just 3 letters');
+    }
+    else{
+        return true;
+    }
+};
 
 inquirer
     .prompt([
@@ -11,6 +21,7 @@ inquirer
             type: 'input',
             message: 'Enter 3 lettrs for your logo:',
             name: 'text',
+            validate:logoNameValidate,
         },
         {
             type: 'input',
